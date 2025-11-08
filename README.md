@@ -44,13 +44,13 @@ climate:
 ```
 Restart Home Assistant, and both zones should appear automatically.
 
-⸻
+---
 
 🧩 Credits
 
 Original integration by floringhimie, modified by Aldec60 for dual-zone.
 
-⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+---
 
 HA Dashboard example :
 

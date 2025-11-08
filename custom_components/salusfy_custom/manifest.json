@@ -1,0 +1,11 @@
+{
+  "domain": "salusfy_custom",
+  "name": "Salus IT500 – Custom Fork",
+  "version": "0.1.1-forkZ2",
+  "documentation": "https://github.com/Aldec60/salusfy-custom",
+  "issue_tracker": "https://github.com/Aldec60/salusfy-custom/issues",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@Aldec60"],
+  "iot_class": "cloud_polling"
+}

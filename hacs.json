@@ -1,0 +1,9 @@
+{
+  "name": "Salus IT500 – Custom Fork",
+  "content_in_root": false,
+  "domains": ["climate"],
+  "homeassistant": "2024.6.0",
+  "render_readme": true,
+  "country": "all",
+  "zip_release": true
+}

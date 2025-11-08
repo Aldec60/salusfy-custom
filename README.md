@@ -32,7 +32,7 @@ climate:
     name: "Salus IT500 - Bathroom"
     username: "your_email"
     password: "your_password"
-    id: "your_device_id"
+    id: "your_device_id"m
     zone: 2
 
 Restart Home Assistant, and both zones should appear automatically.
@@ -42,5 +42,7 @@ Restart Home Assistant, and both zones should appear automatically.
 🧩 Credits
 
 Original integration by floringhimie, modified by Aldec60 for dual-zone.
+
+
 
 

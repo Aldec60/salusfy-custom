@@ -1,43 +1,46 @@
-# Home-Assistant Custom Components
-Custom Components for Home-Assistant (http://www.home-assistant.io)
+# Salus IT500 – Custom Fork (by Aldec60)
 
-# Salus Thermostat Climate Component
-My device is RT301i, it is working with it500 thermostat, the ideea is simple if you have a Salus Thermostat and you are able to login to salus-it500.com and controll it from this page, this custom component should work.
-Component to interface with the salus-it500.com.
-It reads the Current Temperature, Set Temperature, Current HVAC Mode, Current Relay Mode.
+Custom component for Home Assistant, compatible with **Salus IT500 thermostats** (cloud mode).  
+This fork adds **multi-zone (Z1/Z2) support**, better temperature synchronization, and modern async handling.
 
-Keep in mind this is my first custom component and this is also the first version of this Salusfy so it can have bugs. Sorry for that.
+---
 
-**** This is not an official integration.
-### Installation
-* If not exist, in config/custom_components/ create a directory called salusfy 
-* Copy all files in salusfy to your config/custom_components/salusfy/ directory.
-* Configure with config below.
-* Restart Home-Assistant.
+## ✨ Features
+- Two independent zones (Living / Bathroom, etc.)
+- Real-time target & ambient temperature updates
+- HVAC mode reporting (`heating`, `idle`, `off`)
+- Token refresh & error recovery
+- Clean domain name: `salusfy_custom`
 
-### Usage
-To use this component in your installation, add the following to your configuration.yaml file:
+---
 
-### Example configuration.yaml entry
+## ⚙️ Installation
 
-```
+Copy this repository to: /config/custom_components/salusfy_custom/
+
+Then add to your Home Assistant `configuration.yaml`:
+```yaml
 climate:
-  - platform: salusfy
-    username: "EMAIL"
-    password: "PASSWORD"
-    id: "DEVICEID"
-```
-![image](https://user-images.githubusercontent.com/33951255/140300295-4915a18f-f5d4-4957-b513-59d7736cc52a.png)
-![image](https://user-images.githubusercontent.com/33951255/140303472-fd38b9e4-5c33-408f-afef-25547c39551c.png)
+  - platform: salusfy_custom
+    name: "Salus IT500 - Living"
+    username: "your_email"
+    password: "your_password"
+    id: "your_device_id"
+    zone: 1
+
+  - platform: salusfy_custom
+    name: "Salus IT500 - Bathroom"
+    username: "your_email"
+    password: "your_password"
+    id: "your_device_id"
+    zone: 2
+
+Restart Home Assistant, and both zones should appear automatically.
+
+⸻
+
+🧩 Credits
+
+Original integration by floringhimie, modified by Aldec60 for dual-zone.
 
 
-### Getting the DEVICEID
-1. Loggin to https://salus-it500.com with email and password used in the mobile app(in my case RT301i)
-2. Click on the device
-3. In the next page you will be able to see the device ID in the page URL
-4. Copy the device ID from the URL
-![image](https://user-images.githubusercontent.com/33951255/140301260-151b6af9-dbc4-4e90-a14e-29018fe2e482.png)
-
-
-### Known issues
-salus-it500.com server is bloking the IP of the host, in our case the HA external IP. This can be fixed with router restart in case of PPOE connection or you can try to send a mail to salus support...

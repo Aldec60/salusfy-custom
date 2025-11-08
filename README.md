@@ -1,6 +1,11 @@
 # Salus IT500 – Custom Fork (by Aldec60)
 
 Custom component for Home Assistant, compatible with **Salus IT500 thermostats** (cloud mode).  
+
+The Salus IT500 has 2 zones, the first one on the device itself, the second is a remote device (an IT300TX module).
+
+Here is the working adaptation to connect the 2 zones Z1 and Z2 to HA 
+
 This fork adds **multi-zone (Z1/Z2) support**, better temperature synchronization, and modern async handling.
 
 ---

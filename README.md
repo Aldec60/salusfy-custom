@@ -3,6 +3,7 @@
 Custom component for Home Assistant, compatible with **Salus IT500 thermostats** (cloud mode).  
 
 The Salus IT500 has 2 zones, the first one on the device itself, the second is a remote device (an IT300TX module).
+Both control relays into the IT500RX modules.
 
 Here is the working adaptation to connect the 2 zones Z1 and Z2 to HA 
 

@@ -50,5 +50,7 @@ Restart Home Assistant, and both zones should appear automatically.
 Original integration by floringhimie, modified by Aldec60 for dual-zone.
 
 
-
+<p align="center">
+  <img src="IMG_2133.png" alt="Salus IT500 Dashboard" width="700"/>
+</p>
 
